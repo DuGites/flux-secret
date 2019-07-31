@@ -1,0 +1,14 @@
+namespace: flux-secrets-system
+
+namePrefix: flux-secrets-
+
+resources:
+- rbac/rbac_role.yaml
+- rbac/rbac_role_binding.yaml
+- manager/manager.yaml
+- rbac/auth_user_service_account.yaml
+
+patches:
+- manager_image_patch.yaml
+
+- manager_auth_proxy_patch.yaml
